@@ -1,7 +1,6 @@
 ﻿/**
  * Class that represents a Serial input
- * It manages all conversions from reading data to filling 
- * the FIFO with proper Messages
+ * It manages all conversions from reading data to filling the FIFO with proper Messages
  */
 
 using System;
