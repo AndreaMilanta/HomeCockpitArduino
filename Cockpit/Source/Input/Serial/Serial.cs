@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
+using System.Diagnostics;
 using Cockpit.Source.DataManagement;
 using Cockpit.Source.Exceptions;
 using Cockpit.Source.Common;
@@ -30,6 +31,8 @@ namespace Cockpit.Source.Input.Serial
         public static const char BOL_SYM = 'b';
         public static const char BTE_SIM = 't';
         public static const char DEC_DIV = '.';
+
+        private readonly static TraceSource tracer = new TraceSource(Cnst.SERIAL_TRACESRC); 
 
         private SerialPort serial;
 
