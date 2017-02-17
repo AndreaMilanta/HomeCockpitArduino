@@ -22,6 +22,6 @@ namespace Cockpit.Source.DataManagement.Messages
         }
 
         //Visitor Accept
-        public virtual void Execute(MessageVisitor visitor);    
+        public abstract void Execute(MessageVisitor visitor);    
     }
 }

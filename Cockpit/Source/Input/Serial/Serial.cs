@@ -21,18 +21,16 @@ namespace Cockpit.Source.Input.Serial
     class Serial : Input
     {
         //Constants
-        public static const string COM_PORT = "COM3";
-        public static const int BAUDRATE = 115200;
+        public const string COM_PORT = "COM3";
+        public const int BAUDRATE = 115200;
 
         //MUST MODIFY THE EQUIVALENT CONSTANTS ON THE ARDUINO SIDE
-        public static const char DIV_SYM = '&';
-        public static const char INT_SYM = 'i';
-        public static const char FLT_SYM = 'f';
-        public static const char BOL_SYM = 'b';
-        public static const char BTE_SIM = 't';
-        public static const char DEC_DIV = '.';
-
-        private readonly static TraceSource tracer = new TraceSource(Cnst.SERIAL_TRACESRC); 
+        public const char DIV_SYM = '&';
+        public const char INT_SYM = 'i';
+        public const char FLT_SYM = 'f';
+        public const char BOL_SYM = 'b';
+        public const char BTE_SIM = 't';
+        public const char DEC_DIV = '.';
 
         private SerialPort serial;
 
@@ -128,7 +126,7 @@ namespace Cockpit.Source.Input.Serial
 
             Channel chan = readChan(data);
             Value value = readValueAndType(data);
-            switch (chan)y
+            switch (chan)
             {
                 case Channel.LIGHTS:
                     return new LightsMessage((ByteValue)value);

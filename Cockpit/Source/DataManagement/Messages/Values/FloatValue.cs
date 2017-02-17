@@ -12,7 +12,7 @@ namespace Cockpit.Source.DataManagement.Messages.Values
 {
     class FloatValue : Value
     {
-        private static const int DEC_NUM = 3;
+        private const int DEC_NUM = 3;
         private float value;
         private int decNum;   //Number of significant decimal
 

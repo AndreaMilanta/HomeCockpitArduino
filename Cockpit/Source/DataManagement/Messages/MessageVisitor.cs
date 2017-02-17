@@ -8,6 +8,6 @@ namespace Cockpit.Source.DataManagement.Messages
 {
     interface MessageVisitor
     {
-        public void visit(LightsMessage mex);
+        void visit(LightsMessage mex);
     }
 }

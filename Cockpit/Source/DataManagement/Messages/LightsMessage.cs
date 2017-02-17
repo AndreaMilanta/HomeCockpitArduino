@@ -17,7 +17,7 @@ namespace Cockpit.Source.DataManagement.Messages
         }
 
         //Visitor Accept
-        public virtual void Execute(MessageVisitor visitor)
+        public override void Execute(MessageVisitor visitor)
         {
             visitor.visit(this);
         }

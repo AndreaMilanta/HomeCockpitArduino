@@ -12,9 +12,6 @@ namespace Cockpit
 {
     class Program
     {
-        static void Main(string[] args)
-        {
 
-        }
     }
 }

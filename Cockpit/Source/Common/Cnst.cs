@@ -20,7 +20,7 @@ namespace Cockpit.Source.Common
     public static class Cnst
     {
         //TraceSource
-        public static const String SERIAL_TRACESRC = "TraceTest";
+        public const String SERIAL_TRACESRC = "TraceTest";
         
     }
 }
