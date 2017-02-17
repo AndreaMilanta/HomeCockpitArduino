@@ -125,9 +125,10 @@ namespace Cockpit.Source.Input.Serial
         //Creates a message from the string
         static Message interpretString(string data)
         {
+
             Channel chan = readChan(data);
             Value value = readValueAndType(data);
-            switch (chan)
+            switch (chan)y
             {
                 case Channel.LIGHTS:
                     return new LightsMessage((ByteValue)value);
@@ -181,7 +182,6 @@ namespace Cockpit.Source.Input.Serial
             {
                 case INT_SYM:
                     return readValue(s, new IntValue(0));
-                    break;
                 case FLT_SYM:
                     try
                     {
@@ -192,13 +192,10 @@ namespace Cockpit.Source.Input.Serial
                     {
                         throw new InvalidStringException();
                     }
-                    break;
                 case BOL_SYM:
                     return readValue(s, new BoolValue(false));
-                    break;
                 case BTE_SIM:
                     return readValue(s, new ByteValue(0));
-                    break;
                 default: throw new InvalidStringException();
             }
         }
@@ -221,7 +218,6 @@ namespace Cockpit.Source.Input.Serial
             {
                 throw new InvalidStringException();
             }
-            return null;
         }
          
         //Reads a float value from string s
@@ -246,7 +242,6 @@ namespace Cockpit.Source.Input.Serial
             {
                 throw new InvalidStringException();
             }
-            return null;
         }
 
         //Reads a byte value from string s
@@ -267,7 +262,6 @@ namespace Cockpit.Source.Input.Serial
             {
                 throw new InvalidStringException();
             }
-            return null;
         }
 
         //Reads a boolean value from string s
@@ -290,7 +284,6 @@ namespace Cockpit.Source.Input.Serial
             {
                 throw new InvalidStringException();
             }
-            return null;
         }
     }
 }

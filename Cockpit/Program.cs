@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
+using System.Diagnostics.Tracing;
 using Microsoft.FlightSimulator.SimConnect;
 using Cockpit.Source.Common;
 
